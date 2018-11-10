@@ -66,6 +66,32 @@ async  function  wallet_sendTransaction ( opts ) {
 web3.wallet.sendTransaction(opts)
 ```
 
+### wallet_supportedInterfaces
+```javascript
+/**
+* @param  {Array[String]} eip165_signatures - An array of EIP 165 signature strings to be checked against the contract
+* @returns  {Promise} Array{Objects(0xdeadbeef: <bool> supported)} an array of objects defining support for the requested signatures
+*/
+async  function  wallet_supportedInterfaces ( eip165_signatures ) {
+/* Implementation would go here */
+}
+ // Sample usage:
+web3.wallet.supportedInterfaces(eip165_signatures)
+```
+
+### wallet_validNotaries
+```javascript
+/**
+* @returns  {Promise} Array[Object{"address":permission_set}] an array of addresses that are valid notaries for generating signatures for the wallet
+*/
+async  function  wallet_validNotaries () {
+/* Implementation would go here */
+}
+ // Sample usage:
+web3.wallet.validNotaries()
+```
+
+
 ### wallet_sign and wallet_signTypedData
 
 TODO: Specify behaviour if not supported by the wallet
